@@ -31,6 +31,7 @@ class CPUPlayer
     {
         numExploredNodes = 0;
 
+        return null;
     }
 
     // Retourne la liste des coups possibles.  Cette liste contient
@@ -39,6 +40,7 @@ class CPUPlayer
     public ArrayList<Move> getNextMoveAB(Board board){
         numExploredNodes = 0;
 
+        return null;
     }
 
 }
