@@ -1,0 +1,13 @@
+/out/production/log320-labo1/.idea/.gitignore
+/out/production/log320-labo1/Board.class
+/out/production/log320-labo1/CPUPlayer.class
+/out/production/log320-labo1/log320-labo1.iml
+/log320-labo1.iml
+/out/production/log320-labo1/Mark.class
+/out/production/log320-labo1/.idea/misc.xml
+/out/production/log320-labo1/.idea/modules.xml
+/out/production/log320-labo1/Move.class
+/out/production/log320-labo1/README.md
+/out/production/log320-labo1/.idea/vcs.xml
+/Test.class
+*.class

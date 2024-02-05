@@ -37,7 +37,7 @@ class CPUPlayer
         int bestScore = Integer.MIN_VALUE;
 
         for (Move move : getAllPossibleMoves(board)) {
-            int score = minimax(board, move, 0, false);
+            int score = minimax(board, move, 3, false);
             if (score > bestScore) {
                 bestScore = score;
                 possibleMoves.clear();
@@ -61,7 +61,7 @@ class CPUPlayer
         int beta = Integer.MAX_VALUE;
 
         for (Move move : getAllPossibleMoves(board)) {
-            int score = alphaBeta(board, move, 0, alpha, beta, false);
+            int score = alphaBeta(board, move, 3, alpha, beta, false);
             if (score > bestScore) {
                 bestScore = score;
                 possibleMoves.clear();
@@ -75,14 +75,13 @@ class CPUPlayer
         return possibleMoves;
     }
 
+
     private int minimax(Board board, Move move, int depth, boolean isMaximizing) {
         numExploredNodes++;
 
-        // Perform the move on a copy of the board
         Board newBoard = copyBoard(board);
         newBoard.play(move, cpu);
 
-        // Check for terminal states (win, lose, draw)
         int score = newBoard.evaluate(cpu);
 
         if (score != 0 || depth == 0) {
@@ -109,11 +108,9 @@ class CPUPlayer
     private int alphaBeta(Board board, Move move, int depth, int alpha, int beta, boolean isMaximizing) {
         numExploredNodes++;
 
-        // Perform the move on a copy of the board
         Board newBoard = copyBoard(board);
         newBoard.play(move, cpu);
 
-        // Check for terminal states (win, lose, draw)
         int score = newBoard.evaluate(cpu);
 
         if (score != 0 || depth == 0) {
